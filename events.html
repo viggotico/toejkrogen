@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Her linker vi til vores eksterne stylesheet, hvor vores CSS for alle siderne er-->
+    <link href="css/style.css" rel="stylesheet">
+    <title>Tøjkrogen</title>
+</head>
+<body style="background-image: url(img/baggrund2.JPG);">
+    <div class="bg" style="height: 2060px;"></div>
+    <section class="main" style="height: 2000px;">
+        <!--Vi bruger nav-tagget til at lave en navigationsbar i toppen af sitet-->
+        <!--Vi bruger ul-tag for at lave en liste - som vi gør horisontal i CSS. Dertil bruger vi li-tags som er vores punkter.
+        I disse punkter bruger vi a-tagget til at lave punkterne til links, så man kan navigere rundt på siden.
+        Det midterste punkt er illustreret via Tøjkrogens logo, så når man klikker på det, ryger man til forsiden.-->
+        <nav class="navbar">
+            <ul class="nav-items">
+                <li><a id="nav-item-left" href="omOs.html">OM OS</a></li>
+                <li><a id="nav-item-center" href="index.html"><img id="logo" src="img/Logoet.png" alt="logo"></a></li>
+                <li><a id="nav-item-right" href="events.html">EVENTS</a></li>
+            </ul>
+        </nav>
+    
+
+        <!-- Her er vores søgebar -->
+        <section class="search-bar">
+            <form action="#">
+                <input id="search-input" type="text" placeholder="Søg..">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+            </form>
+        </section>
+
+        <!-- Det her er deres slogan -->
+        <section class="events-header">
+            <h2>Events</h2>
+            <article class="featured-event-container">
+                <div class="featured-event-inner-container">
+                    <div>
+                        <h3>BOKSÅBNING</h3>
+                        <p>Fredag d. 22. september kl. 14.00</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- Bruges til at scroll ned / viser at siden fortsætter -->
+        <div class="scroll-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="29" viewBox="0 0 48 29" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M23.7181 28.9971L47.9435 6.43743L42.4916 0.58287L23.8819 17.9128L5.59865 8.39233e-05L0 5.71455L23.238 28.4816L23.7181 28.9971Z" fill="white"/>
+              </svg>
+        </div>
+        
+        <!-- De diverse events man kan trykke ind på -->
+        <section class="events-header events-header-offset">
+            <h2>Upcoming Events</h2>
+            <article class="upcoming-event-container">
+                <div class="upcoming-event-inner-container">
+                    <div>
+                        <h3>VINSMAGNING</h3>
+                    </div>
+                </div>
+            </article>
+            <article class="upcoming-event-container">
+                <div class="upcoming-event-inner-container">
+                    <div>
+                        <h3>STRIKKEKLUB</h3>
+                    </div>
+                </div>
+            </article>
+            <article class="upcoming-event-container">
+                <div class="upcoming-event-inner-container">
+                    <div>
+                        <h3>WORKSHOP</h3>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!--Her er vores footer med links til deres sociale medier og et Google Maps iframe, så man kan se, hvor butikken ligger-->
+        <footer style="top: 220px;">
+            <section class="footer-info">
+                <ul class="socials">
+                    <li><a href="https://www.instagram.com/toejkrogen/" class="insta"><img src="socials/instagram.png" alt="instagram"></a></li>
+                    <li><a href="https://www.facebook.com/events/164636536585192" class="facebook"><img src="socials/Facebook.png" alt="facebook"></a></li>
+                    <li><a href="https://trendsales.dk/p/2387302" class="trendsales"><img src="socials/Trendsales.png" alt="trendsales"></a></li>
+                </ul>
+                <h1>HER LIGGER VI</h1>
+                <p>Borggade 11, 8000 Aarhus C</p>
+            </section>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1110.91250763527!2d10.207828375324256!3d56.160130042868076!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464c3f8f5c2c1b37%3A0xdf1cf6f031e26477!2sT%C3%B8jKrogen!5e0!3m2!1sda!2sdk!4v1695208792384!5m2!1sda!2sdk" width="100%" height="225px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </footer>
+    </section>
+</body>
+</html>

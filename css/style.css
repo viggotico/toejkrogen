@@ -1,0 +1,270 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: 'Comfortaa';
+  src: url('fonts/Comfortaa-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Convergence';
+  src: url('fonts/Convergence-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'DaysOne';
+  src: url('fonts/DaysOne-Regular.ttf') format('truetype');
+}
+
+body {
+  /*For at indsætte et billede som baggrund, bruger vi 'background-image: url()', og vælger så blot det billede, vi ønsker*/
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+.bg {
+  z-index: -50;
+  position: absolute;
+  background-color: black;
+  width: 100%;
+  opacity: 0.45;
+}
+
+.main {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* .container {
+  padding: 0 100px;
+} */
+
+.navbar a {
+  font-size: 1.5rem;
+  color: #616161;
+  z-index: 10;
+}
+
+.nav-items {
+  /*For at have vores navigationsbar centreret bruger vi 'display: flex' og 'justify-content: space-evenly', for
+  at vi også har det ligeligt fordelt i navigationsbaren*/
+  display: flex;
+  width: 100%;
+  /*For at navbaren er mere fremtrædende har vi en farve baggrund, der ligger over baggrundsbilledet, og vi bruger 
+  'height: fit-content' til at få denne baggrunds højde til at passe til logo og navigationslinks*/
+  background-color: rgb(255, 255, 255, 0.75);
+  height: fit-content;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  z-index: 11;
+}
+
+ul li {
+  list-style-type: none;
+  margin: 0 auto;
+}
+
+nav {
+    /*For at fjerne bulletpoints på vores list-items, bruger vi 'list-style'type: none'*/
+    list-style-type: none; 
+    /*For at fjerne browsernes default indstillinger, sætter vi 'margin' og 'padding' til 0*/
+    margin: 0;
+    padding: 0;
+    /*For at vores navigationsbar forbliver på sitet, mens man scroller ned, bruger vi 'position: fixed' og 'top:0'
+    så den forbliver i toppen af siden*/
+    /* position: fixed; */
+    top: 0;
+    width: 100%;
+    align-items: center;
+    position: sticky;
+    z-index: 20;
+  }
+
+  li {
+    /*For at lave en horisontal navigationsbar bruger vi 'display: inline', da vi bryder linjeskift her*/
+    display: inline;
+    text-decoration: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    /* font: var(--standard, 400 40px 'Comfortaa', sans-serif); */
+    position: relative;
+  }
+  
+  a:hover {
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+  }
+
+  section.search-bar {
+    background-color: rgb(255, 255, 255, 0.75);
+    align-self: flex-end;
+    border-radius: 20px;
+    padding: 7px;
+    margin-top: 10px;
+    margin-right: 10px;
+    width: 200px;
+  }
+
+  #search-input {
+    background-color: transparent;
+    border: none;
+  }
+  #search-input {
+    margin-left: 5px;
+    border: none;
+    outline: none;
+  }
+
+  .slogan {
+    height: 500px;
+    margin: auto 0;
+  }
+
+  .slogan h2 {
+    margin: auto;
+    color: white;
+    line-height: 90px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: 'Convergence'; */
+    font-size: 50px;
+    top: 250px;
+    position: relative;
+  }
+
+  .events-header {
+    margin: auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .events-header h2 {
+    margin: auto;
+    color: white;
+    line-height: 90px;
+    font-family: 'Convergence';
+    font-size: 40px;
+  }
+
+  .events-header-offset {
+    position: relative;
+    top: 200px
+  }
+
+  .featured-event-container {
+    background-color: rgba(122, 141, 70, 0.75);
+    width: 628.55px;
+    height: 262.6px;
+    margin: 39px;
+    padding: 50px;
+    border-radius: 39px;
+    z-index: 5;
+  }
+
+  .featured-event-inner-container {
+    background-color: #aec179;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+  }
+
+  .upcoming-event-container {
+    background-color: rgba(214, 161, 114, 0.75);
+    width: 467.35px;
+    height: 76.05px;
+    margin: 18.85px;
+    padding: 20px;
+    border-radius: 34px;
+  }
+
+  .upcoming-event-inner-container {
+    background-color: #D6A172;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+  }
+
+  /* Tekst featured */
+  .featured-event-inner-container div {
+    color: #455029;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    top: 65px;
+  }
+
+  .featured-event-inner-container div h3 {
+    font-family: 'DaysOne';
+    font-size: 3rem;
+  }
+
+  .featured-event-inner-container div p {
+    font-family: 'Comfortaa';
+    line-height: 100px;
+    font-size: 1.8rem;
+  }
+
+  /* Tekst upcoming */
+  .upcoming-event-inner-container div {
+    color: #4B3929;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    top: 23px;
+  }
+
+  .upcoming-event-inner-container div h3 {
+    font-family: 'DaysOne';
+    font-weight: 400;
+    font-size: 1.4rem;
+  }
+
+  .scroll-button {
+    top: 100px;
+    transform: scale(0.7);
+    position: relative;
+  }
+
+  footer {
+    background-color: rgb(255, 255, 255, 0.5);
+    padding-top: 40px;
+    position: relative;
+  }
+
+  .socials {
+    margin-bottom: 20px;
+  }
+
+  .socials img {
+    margin: 0 20px;
+    width: 80px;
+  }
+
+  .footer-info h1 {
+    color: white;
+    font-family: 'Convergence';
+    font-size: 3rem;
+  }
+
+  .footer-info p {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.3rem;
+  }
+
+  footer iframe {
+    padding-top: 40px;
+  }
